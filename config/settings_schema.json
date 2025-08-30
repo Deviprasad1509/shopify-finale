@@ -1,77 +1,99 @@
 [
   {
-    "name": "theme_info",
-    "theme_name": "SR Enterprises Theme",
-    "theme_version": "1.0.0",
-    "theme_author": "SR Enterprises",
-    "theme_documentation_url": "https://github.com/Deviprasad1509/shopify-finale",
-    "theme_support_url": "mailto:support@srent.com"
-  },
-  {
-    "name": "Colors",
+    "name": "Ebook Store Settings",
     "settings": [
       {
-        "type": "color",
-        "id": "primary_color",
-        "label": "Primary Color",
-        "default": "#059669"
+        "type": "header",
+        "content": "Store Information"
       },
       {
-        "type": "color",
-        "id": "secondary_color",
-        "label": "Secondary Color",
-        "default": "#0D9488"
+        "type": "text",
+        "id": "store_name",
+        "label": "Store Name",
+        "default": "Buis Buz"
       },
       {
-        "type": "color",
-        "id": "accent_color",
-        "label": "Accent Color",
-        "default": "#F59E0B"
+        "type": "textarea",
+        "id": "store_description",
+        "label": "Store Description",
+        "default": "Discover your next great read with our premium ebook collection."
       },
       {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text Color",
-        "default": "#1F2937"
+        "type": "header",
+        "content": "Theme Colors"
       },
       {
         "type": "color",
         "id": "background_color",
         "label": "Background Color",
-        "default": "#FFFFFF"
-      }
-    ]
-  },
-  {
-    "name": "Typography",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading_font",
-        "label": "Heading Font Family",
-        "default": "Inter"
+        "default": "#F8F9FA"
       },
       {
-        "type": "text",
-        "id": "body_font",
-        "label": "Body Font Family",
-        "default": "Inter"
-      }
-    ]
-  },
-  {
-    "name": "Store Information",
-    "settings": [
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#212529"
+      },
       {
-        "type": "textarea",
-        "id": "store_description",
-        "label": "Store Description",
-        "default": "Welcome to SR Enterprises - Your trusted source for quality digital products and ebooks."
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Green",
+        "default": "#28A745"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary Green",
+        "default": "#218838"
+      },
+      {
+        "type": "header",
+        "content": "Typography"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "serif"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "grid_columns",
+        "label": "Product Grid Columns",
+        "options": [
+          { "value": "2", "label": "2 columns" },
+          { "value": "3", "label": "3 columns" },
+          { "value": "4", "label": "4 columns" },
+          { "value": "5", "label": "5 columns" }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_featured_books",
+        "label": "Show Featured Books Section",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show_categories",
         "label": "Show Categories Navigation",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_authors",
+        "label": "Show Authors Section",
         "default": true
       }
     ]

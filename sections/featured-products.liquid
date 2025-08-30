@@ -1,95 +1,51 @@
-<section class="py-16 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Discover our handpicked selection of premium digital products and ebooks
-      </p>
-    </div>
-
+<section class="all-products">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
     <div class="products-grid">
-      {% for product in collections.all.products limit: 8 %}
+      {% for product in collections.all.products %}
         <div class="product-card">
-          <div class="card-content">
+          <a href="{{ product.url }}">
             {% if product.featured_image %}
-              <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" class="w-full h-48 object-cover rounded-t-lg">
+              {{ product.featured_image | image_url: width: 300 | image_tag }}
             {% else %}
-              <div class="w-full h-48 bg-gray-200 rounded-t-lg flex items-center justify-center">
-                <span class="text-gray-500">No Image</span>
+              <div style="height: 224px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #6c757d;">
+                <span>No Image</span>
               </div>
             {% endif %}
-
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                <a href="{{ product.url }}" class="hover:text-green-600 transition-colors">
-                  {{ product.title }}
-                </a>
-              </h3>
-
+            <div class="card-content">
+              <h3>{{ product.title }}</h3>
               {% if product.metafields.custom.author %}
-                <p class="text-sm text-gray-600 mb-3">By {{ product.metafields.custom.author }}</p>
+                <p class="author">by {{ product.metafields.custom.author }}</p>
               {% endif %}
-
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-2xl font-bold text-green-600">{{ product.price | money }}</span>
-                {% if product.compare_at_price %}
-                  <span class="text-sm text-gray-500 line-through">{{ product.compare_at_price | money }}</span>
-                {% endif %}
-              </div>
-
-              <div class="flex gap-2">
-                <form method="post" action="/cart/add" class="flex-1">
+              <p class="price">{{ product.price | money }}</p>
+              <div class="product-actions">
+                <form method="post" action="/cart/add" style="display: inline;">
                   <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                  <button type="submit" class="btn w-full">
-                    Add to Cart
-                  </button>
+                  <button type="submit" class="btn">Add to Cart</button>
                 </form>
-
-                <form method="post" action="/cart/add" class="flex-1">
+                <form method="post" action="/cart/add" style="display: inline; margin-left: 5px;">
                   <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                   <input type="hidden" name="return_to" value="/checkout">
-                  <button type="submit" class="btn-buy-now w-full">
-                    Buy Now
-                  </button>
+                  <button type="submit" class="btn btn-buy-now">Buy Now</button>
                 </form>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       {% endfor %}
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="/collections/all" class="btn">View All Products</a>
     </div>
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Featured Products",
-  "tag": "section",
+  "name": "All Products Grid",
   "settings": [
     {
       "type": "text",
       "id": "title",
       "label": "Section Title",
-      "default": "Featured Products"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Section Description",
-      "default": "Discover our handpicked selection of premium digital products and ebooks"
-    },
-    {
-      "type": "range",
-      "id": "products_limit",
-      "label": "Number of Products",
-      "min": 4,
-      "max": 12,
-      "step": 4,
-      "default": 8
+      "default": "Our Ebooks Collection"
     }
   ]
 }
