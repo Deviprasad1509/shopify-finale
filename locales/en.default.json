@@ -1,0 +1,72 @@
+{
+  "general": {
+    "store_name": "SR Enterprises",
+    "store_description": "Your trusted source for quality digital products and ebooks",
+    "email": "support@srent.com",
+    "phone": "+1 (555) 123-4567"
+  },
+  "navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "categories": "Categories",
+    "about": "About Us",
+    "contact": "Contact",
+    "cart": "Cart",
+    "account": "Account"
+  },
+  "buttons": {
+    "add_to_cart": "Add to Cart",
+    "buy_now": "Buy Now",
+    "checkout": "Checkout",
+    "continue_shopping": "Continue Shopping",
+    "view_details": "View Details",
+    "subscribe": "Subscribe"
+  },
+  "cart": {
+    "title": "Your Shopping Cart",
+    "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "update": "Update"
+  },
+  "product": {
+    "price": "Price",
+    "author": "Author",
+    "description": "Description",
+    "specifications": "Specifications",
+    "reviews": "Reviews",
+    "related_products": "Related Products"
+  },
+  "footer": {
+    "company_name": "SR Enterprises",
+    "copyright": "© {{ year }} SR Enterprises. All rights reserved.",
+    "quick_links": "Quick Links",
+    "customer_service": "Customer Service",
+    "follow_us": "Follow Us",
+    "newsletter_title": "Stay Updated",
+    "newsletter_description": "Subscribe to our newsletter for the latest updates and offers",
+    "email_placeholder": "Enter your email"
+  },
+  "forms": {
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "submit": "Submit",
+    "required": "Required field",
+    "invalid_email": "Please enter a valid email address"
+  },
+  "errors": {
+    "page_not_found": "Page not found",
+    "server_error": "Server error",
+    "network_error": "Network error"
+  },
+  "accessibility": {
+    "skip_to_content": "Skip to main content",
+    "menu_toggle": "Toggle navigation menu",
+    "close": "Close"
+  }
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "SR Enterprises Theme",
+    "theme_version": "1.0.0",
+    "theme_author": "SR Enterprises",
+    "theme_documentation_url": "https://github.com/Deviprasad1509/shopify-finale",
+    "theme_support_url": "mailto:support@srent.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Color",
+        "default": "#059669"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "default": "#0D9488"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent Color",
+        "default": "#F59E0B"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#1F2937"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_font",
+        "label": "Heading Font Family",
+        "default": "Inter"
+      },
+      {
+        "type": "text",
+        "id": "body_font",
+        "label": "Body Font Family",
+        "default": "Inter"
+      }
+    ]
+  },
+  {
+    "name": "Store Information",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "store_description",
+        "label": "Store Description",
+        "default": "Welcome to SR Enterprises - Your trusted source for quality digital products and ebooks."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_categories",
+        "label": "Show Categories Navigation",
+        "default": true
+      }
+    ]
+  }
+]

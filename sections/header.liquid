@@ -1,0 +1,103 @@
+<header class="site-header">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-gray-900">
+          {% if shop.brand.logo %}
+            <img src="{{ shop.brand.logo | image_url }}" alt="{{ shop.name }}" class="h-8 w-auto">
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/" class="nav-link {{ template == 'index' ? 'text-green-600' : '' }}">Home</a>
+        <a href="/collections/all" class="nav-link">Shop</a>
+        {% if settings.show_categories %}
+          <a href="/collections" class="nav-link">Categories</a>
+        {% endif %}
+        <a href="/pages/about" class="nav-link">About</a>
+        <a href="/pages/contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Cart and Account -->
+      <div class="flex items-center space-x-4">
+        <!-- Cart -->
+        <a href="/cart" class="relative text-gray-700 hover:text-green-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5H19M7 13v8a2 2 0 002 2h10a2 2 0 002-2v-3"></path>
+          </svg>
+          {% if cart.item_count > 0 %}
+            <span class="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              {{ cart.item_count }}
+            </span>
+          {% endif %}
+        </a>
+
+        <!-- Account -->
+        {% if customer %}
+          <a href="/account" class="text-gray-700 hover:text-green-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </a>
+        {% else %}
+          <a href="/account/login" class="text-gray-700 hover:text-green-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+            </svg>
+          </a>
+        {% endif %}
+
+        <!-- Mobile Menu Toggle -->
+        <button class="md:hidden mobile-menu-toggle text-gray-700 hover:text-green-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden mobile-menu hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="/" class="nav-link {{ template == 'index' ? 'text-green-600' : '' }}">Home</a>
+        <a href="/collections/all" class="nav-link">Shop</a>
+        {% if settings.show_categories %}
+          <a href="/collections" class="nav-link">Categories</a>
+        {% endif %}
+        <a href="/pages/about" class="nav-link">About</a>
+        <a href="/pages/contact" class="nav-link">Contact</a>
+        {% if customer %}
+          <a href="/account" class="nav-link">My Account</a>
+        {% else %}
+          <a href="/account/login" class="nav-link">Login</a>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_categories",
+      "label": "Show categories in navigation",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

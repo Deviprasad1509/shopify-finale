@@ -1,0 +1,28 @@
+<section class="py-12 bg-gradient-to-r from-green-50 to-emerald-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ collection.title }}</h1>
+      {% if collection.description %}
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ collection.description }}</p>
+      {% else %}
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore our collection of premium digital products and ebooks</p>
+      {% endif %}
+
+      <div class="mt-6 flex items-center justify-center gap-6 text-sm text-gray-500">
+        <span>{{ collection.products_count }} products</span>
+        {% if collection.products_count > 0 %}
+          <span>•</span>
+          <span>From {{ collection.products | map: 'price' | sort | first | money }} to {{ collection.products | map: 'price' | sort | last | money }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Header",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

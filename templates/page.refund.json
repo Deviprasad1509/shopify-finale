@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "page-content": {
+      "type": "page-content"
+    }
+  },
+  "order": [
+    "page-content"
+  ],
+  "content": "<div class='max-w-4xl mx-auto py-16 px-4'>\n  <h1 class='text-4xl font-bold text-gray-900 mb-8 text-center'>Refund Policy</h1>\n  \n  <div class='prose prose-lg max-w-none'>\n    <p class='text-lg text-gray-600 mb-8 text-center'>\n      At SR Enterprises, we strive to provide high-quality digital products. Due to the nature of digital downloads, we maintain a clear refund policy to ensure fairness for both customers and our business.\n    </p>\n    \n    <h2 class='text-2xl font-semibold text-gray-900 mb-4'>Digital Product Refunds</h2>\n    <p class='mb-6'>\n      E-books and digital products are non-refundable once the download has been initiated. This policy protects against unauthorized distribution and ensures the integrity of our digital content.\n    </p>\n    \n    <h2 class='text-2xl font-semibold text-gray-900 mb-4'>Refund Eligibility</h2>\n    <ul class='list-disc pl-6 mb-6 space-y-2'>\n      <li>Refunds may be considered within 24 hours of purchase if the download link is not working</li>\n      <li>Technical issues preventing access to purchased content</li>\n      <li>Duplicate purchases (same product purchased twice)</li>\n    </ul>\n    \n    <h2 class='text-2xl font-semibold text-gray-900 mb-4'>How to Request a Refund</h2>\n    <p class='mb-6'>\n      If you believe you qualify for a refund, please contact our support team at <a href='mailto:support@srent.com' class='text-green-600 hover:text-green-700'>support@srent.com</a> within 24 hours of purchase with your order details.\n    </p>\n    \n    <h2 class='text-2xl font-semibold text-gray-900 mb-4'>Processing Time</h2>\n    <p class='mb-6'>\n      Approved refunds are processed within 3-5 business days and will be credited back to your original payment method.\n    </p>\n    \n    <div class='bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8'>\n      <h3 class='text-lg font-semibold text-blue-900 mb-2'>Contact Information</h3>\n      <p class='text-blue-800'>\n        For any questions about our refund policy, please contact our support team at <strong>support@srent.com</strong>.\n      </p>\n    </div>\n    \n    <p class='text-sm text-gray-500'>\n      <em>Last updated: January 2025</em>\n    </p>\n  </div>\n</div>"
+}

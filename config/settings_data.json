@@ -1,0 +1,16 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "primary_color": "#059669",
+      "secondary_color": "#0D9488",
+      "accent_color": "#F59E0B",
+      "text_color": "#1F2937",
+      "background_color": "#FFFFFF",
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "store_description": "Welcome to SR Enterprises - Your trusted source for quality digital products and ebooks.",
+      "show_categories": true
+    }
+  }
+}
